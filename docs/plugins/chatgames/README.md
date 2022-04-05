@@ -2,13 +2,15 @@
 
 Welcome to the Documentation for [ChatGames](https://github.com/yakovliam-com/chatgames)!
 
-Last Updated: Apr 1, 2022
+Last Updated: Apr 5, 2022
 
 <a href="https://nightly.link/yakovliam-com/chatgames/workflows/gradle/main/ChatGames%20Artifacts.zip"
    target="_blank">
     <button>Download Latest
     </button>
 </a>
+
+!> To run this plugin you need [PlaceholderAPI](https://www.spigotmc.org/resources/placeholderapi.6245/)
 
 ---
 
