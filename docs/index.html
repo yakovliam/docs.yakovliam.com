@@ -13,7 +13,12 @@
       rel="stylesheet"
       href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css"
     />
-    <link rel="icon" type="image/x-icon" href="/_media/logo.png">
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/npm/@sujaykumarh/docsify-plugin-footer@1.x/dist/plugin.min.css"
+    />
+    <link rel="stylesheet" href="custom-styles.css" />
+    <link rel="icon" type="image/x-icon" href="/_media/logo.png" />
   </head>
   <body>
     <div id="app"></div>
@@ -22,10 +27,25 @@
         name: "Yakovliam Docs",
         repo: "https://github.com/yakovliam/docs.yakovliam.com",
         homepage: "README.md",
-        loadSidebar: true
+        loadSidebar: true,
+        customPageFooter: {
+          debug: false, // for debugging
+
+          showPoweredBy: false, // should show powered by docsify at right
+          copyrightYear: "", // show copyright year, default current year.
+          showCopyright: true, // set to false to hide default copyright
+          copyright: undefined, // set this to html string to use custom copyrihgt section
+          copyrightOwnerName: " Jacob Cohen", // copyright owner name
+          copyrightOwnerLink: "https://yakovliam.com", // copyright owner link if any
+          copyrightExtra: undefined, // any exta text to show below copyright owner section
+
+          useLocalStorage: false, // build and store footer in localstorage for quick access
+        },
       };
     </script>
     <!-- Docsify v4 -->
     <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+    <script src="//cdn.jsdelivr.net/npm/@sujaykumarh/docsify-plugin-footer@1.x/dist/plugin.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/vue@3/dist/vue.global.prod.js"></script>
   </body>
 </html>

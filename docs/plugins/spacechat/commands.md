@@ -41,9 +41,8 @@ If the internal messaging system is enabled (redis), then all connected servers 
 
 In order to broadcast (using the command above), the applicable player needs the permission node `space.chat.command.broadcast`.
 
-:::caution
-**Remember**: For any sub commands below `/spacechat`, the player **needs** to have the permission node `space.chat.command`!
-:::
+!> **Remember**: For any sub commands below `/spacechat`, the player **needs** to have the permission node `space.chat.command`!
+
 
 Broadcasting with MiniMessage
 -
