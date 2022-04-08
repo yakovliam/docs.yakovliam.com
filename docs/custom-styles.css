@@ -44,6 +44,13 @@
   transition: transform 0.2s ease-in-out;
 }
 
+.subtext {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+}
+
 /* styling */
 
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap");

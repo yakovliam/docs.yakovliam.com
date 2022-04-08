@@ -1,21 +1,3 @@
-<script>
- Vue.createApp({
-     data() {
-         return {
-             latestRelease: null,
-             isFetching: true,
-         }
-     },
-     created() {
-         fetch('https://api.github.com/repos/yakovliam-com/spacechat/releases/latest')
-         .then(response => response.json())
-         .then(data => (this.latestRelease = data))
-         .catch(err => console.log(err))
-         .finally(() => this.isFetching = false);
-     }
-  }).mount('#main');
-</script>
-
 # :rocket: SpaceChat
 
 Welcome to the Documentation for [SpaceChat](https://github.com/yakovliam-com/spacechat)!
@@ -26,9 +8,12 @@ Last Updated: Apr 7, 2022
 
 <a href="https://nightly.link/yakovliam-com/spacechat/workflows/gradle/master/SpaceChat%20Artifacts.zip">
 <button class="button">
+    <div class="subtext">
     <span class="button__text">
-    Download Latest <i v-if="!isFetching">{{latestRelease?.tag_name}}
+    Download Latest
     </span>
+     <img alt="GitHub release (latest SemVer)" src="https://img.shields.io/github/v/release/yakovliam-com/spacechat?style=for-the-badge">
+    </div>
     <svg class="button__svg" role="presentational" viewBox="0 0 600 600">
     <defs>
     <clipPath id="myClip">

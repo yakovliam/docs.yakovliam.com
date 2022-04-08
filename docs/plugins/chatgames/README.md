@@ -1,21 +1,3 @@
-<script>
- Vue.createApp({
-     data() {
-         return {
-             latestRelease: null,
-             isFetching: true,
-         }
-     },
-     created() {
-         fetch('https://api.github.com/repos/yakovliam-com/chatgames/releases/latest')
-         .then(response => response.json())
-         .then(data => (this.latestRelease = data))
-         .catch(err => console.log(err))
-         .finally(() => this.isFetching = false);
-     }
-  }).mount('#main');
-</script>
-
 # :speech_balloon: ChatGames
 
 Welcome to the Documentation for [ChatGames](https://github.com/yakovliam-com/chatgames)!
@@ -24,18 +6,21 @@ Last Updated: Apr 7, 2022
 
 !> To run this plugin you need [PlaceholderAPI](https://www.spigotmc.org/resources/placeholderapi.6245/)
 
-| Section                     | Link                                                      |
-| --------------------------- | --------------------------------------------------------- |
-| Commands                  | [Visit Commands](plugins/chatgames/commands.md)                               |
-| Config & Permissions      | [Visit Config & Permissions](plugins/chatgames/configandpermissions.md)       |
+| Section              | Link                                                                    |
+| -------------------- | ----------------------------------------------------------------------- |
+| Commands             | [Visit Commands](plugins/chatgames/commands.md)                         |
+| Config & Permissions | [Visit Config & Permissions](plugins/chatgames/configandpermissions.md) |
 
 ---
 
 <a href="https://nightly.link/yakovliam-com/chatgames/workflows/gradle/main/ChatGames%20Artifacts.zip">
 <button class="button">
+    <div class="subtext">
     <span class="button__text">
-    Download Latest <i v-if="!isFetching">{{latestRelease?.tag_name}}
+    Download Latest
     </span>
+    <img alt="GitHub release (latest SemVer)" src="https://img.shields.io/github/v/release/yakovliam-com/chatgames?style=for-the-badge">    
+    </div>
     <svg class="button__svg" role="presentational" viewBox="0 0 600 600">
     <defs>
     <clipPath id="myClip">
@@ -63,5 +48,3 @@ Last Updated: Apr 7, 2022
     </svg>
 </button>
 </a>
-
-
